@@ -4,6 +4,7 @@
 ![GitHub Stars](https://img.shields.io/github/stars/P3TERX/Actions-OpenWrt.svg?style=flat-square&label=Stars&logo=github)
 ![GitHub Forks](https://img.shields.io/github/forks/P3TERX/Actions-OpenWrt.svg?style=flat-square&label=Forks&logo=github)
 
+注意事项：
 1.刷机前，在breed中选择openwrt恢复出厂，再刷机。
 2.刷机后，如果打不开后台web，尝试插拔lan网线。
 
