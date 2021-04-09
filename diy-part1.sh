@@ -19,8 +19,8 @@
 #设置network（lan和wan）
 #sed -i "/exit 0/i\uci set network.lan.proto='static'" /workdir/openwrt/package/lean/default-settings/files/zzz-default-settings
 sed -i "/exit 0/i\uci set network.lan.ipaddr='192.168.2.1'" /workdir/openwrt/package/lean/default-settings/files/zzz-default-settings
-sed -i "/exit 0/i\uci set network.lan.gateway='192.168.1.1'" /workdir/openwrt/package/lean/default-settings/files/zzz-default-settings
-sed -i "/exit 0/i\uci set network.lan.dns='192.168.1.1'" /workdir/openwrt/package/lean/default-settings/files/zzz-default-settings
+#sed -i "/exit 0/i\uci set network.lan.gateway='192.168.1.1'" /workdir/openwrt/package/lean/default-settings/files/zzz-default-settings
+#sed -i "/exit 0/i\uci set network.lan.dns='192.168.1.1'" /workdir/openwrt/package/lean/default-settings/files/zzz-default-settings
 sed -i "/exit 0/i\uci set network.lan.netmask='255.255.255.0'" /workdir/openwrt/package/lean/default-settings/files/zzz-default-settings
 
 sed -i "/exit 0/i\uci set network.wan.proto='static'" /workdir/openwrt/package/lean/default-settings/files/zzz-default-settings
