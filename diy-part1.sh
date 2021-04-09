@@ -45,7 +45,7 @@ sed -i "/exit 0/i\uci set wireless.default_radio1.key='308fuckwj..'" /workdir/op
 sed -i "/exit 0/i\uci commit wireless" /workdir/openwrt/package/lean/default-settings/files/zzz-default-setting
 
 #设置dhcp
-sed -i "/exit 0/i\uci set uci set dhcp.@dnsmasq[0].filter_aaaa='0'" /workdir/openwrt/package/lean/default-settings/files/zzz-default-settings   #关闭“禁止解析IPv6 DNS记录”（过滤掉 IPv6(AAAA) ，只返回 IPv4 DNS 域名记录）
+sed -i "/exit 0/i\uci set dhcp.@dnsmasq[0].filter_aaaa='0'" /workdir/openwrt/package/lean/default-settings/files/zzz-default-settings   #关闭“禁止解析IPv6 DNS记录”（过滤掉 IPv6(AAAA) ，只返回 IPv4 DNS 域名记录）
 
 sed -i "/exit 0/i\uci commit dhcp" /workdir/openwrt/package/lean/default-settings/files/zzz-default-settings
 ########################################################################################
