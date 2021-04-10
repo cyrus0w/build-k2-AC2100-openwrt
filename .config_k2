@@ -6658,6 +6658,8 @@ CONFIG_XRAY_PLUGIN_COMPRESS_UPX=y
 # CONFIG_PACKAGE_collectd is not set
 CONFIG_PACKAGE_coremark=y
 CONFIG_PACKAGE_coreutils=y
+CONFIG_PACKAGE_coreutils-nohup=y
+CONFIG_DEFAULT_coreutils-nohup=y
 # CONFIG_PACKAGE_cpusage is not set
 # CONFIG_PACKAGE_crconf is not set
 # CONFIG_PACKAGE_crelay is not set
