@@ -15,6 +15,18 @@
 
 # Add a feed source
 #sed -i '$a src-git lienol https://github.com/Lienol/openwrt-package' feeds.conf.default
+#####################################自定义编译源########################################
+echo "src-git video https://github.com/openwrt/video.git" >> /workdir/openwrt/feeds.conf.default
+echo "src-git targets https://github.com/openwrt/targets.git" >> /workdir/openwrt/feeds.conf.default
+echo "src-git management https://github.com/openwrt-management/packages.git" >> /workdir/openwrt/feeds.conf.default
+echo "src-git oldpackages http://git.openwrt.org/packages.git" >> /workdir/openwrt/feeds.conf.default
+echo "src-link custom /usr/src/openwrt/custom-feed" >> /workdir/openwrt/feeds.conf.default
+echo "src-git helloworld https://github.com/fw876/helloworld" >> /workdir/openwrt/feeds.conf.default
+echo "src-git openclash https://github.com/vernesong/OpenClash.git" >> feeds.conf.default
+echo "src-git kenzo https://github.com/V2RaySSR/openwrt-packages" >> feeds.conf.default
+echo "src-git small https://github.com/V2RaySSR/small" >> feeds.conf.default
+########################################################################################
+
 ###################################自定义路由基础设置#####################################
 #设置network（lan和wan）
 #sed -i "/exit 0/i\uci set network.lan.proto='static'" /workdir/openwrt/package/lean/default-settings/files/zzz-default-settings
