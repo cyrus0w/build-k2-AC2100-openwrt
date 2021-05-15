@@ -34,14 +34,15 @@ sed -i "/exit 0/i\uci set network.lan.ipaddr='192.168.2.1'" /workdir/openwrt/pac
 #sed -i "/exit 0/i\uci set network.lan.gateway='192.168.1.1'" /workdir/openwrt/package/lean/default-settings/files/zzz-default-settings
 #sed -i "/exit 0/i\uci set network.lan.dns='192.168.1.1'" /workdir/openwrt/package/lean/default-settings/files/zzz-default-settings
 sed -i "/exit 0/i\uci set network.lan.netmask='255.255.255.0'" /workdir/openwrt/package/lean/default-settings/files/zzz-default-settings
+##以下针对wan设置二选一，第一种是光猫拨号，wan设置为光猫内网的静态ip；第二种是光猫桥接，wan设置为PPPoE拨号，同时给wan口再增设一个光猫内网的静态ip，这样可做到路由器局域网访问到光猫的后台。
+sed -i "/exit 0/i\uci set network.wan.proto='static'" /workdir/openwrt/package/lean/default-settings/files/zzz-default-settings             #第一种
+sed -i "/exit 0/i\uci set network.wan.ipaddr='192.168.1.3'" /workdir/openwrt/package/lean/default-settings/files/zzz-default-settings       #第一种
+sed -i "/exit 0/i\uci set network.wan.gateway='192.168.1.1'" /workdir/openwrt/package/lean/default-settings/files/zzz-default-settings      #第一种
+sed -i "/exit 0/i\uci set network.wan.dns='192.168.1.1'" /workdir/openwrt/package/lean/default-settings/files/zzz-default-settings          #第一种
+sed -i "/exit 0/i\uci set network.wan.netmask='255.255.255.0'" /workdir/openwrt/package/lean/default-settings/files/zzz-default-settings    #第一种
+sed -i "/exit 0/i\uci set network.wan6.proto=none" /workdir/openwrt/package/lean/default-settings/files/zzz-default-settings   #关掉wan6     #第一种
 
-sed -i "/exit 0/i\uci set network.wan.proto='static'" /workdir/openwrt/package/lean/default-settings/files/zzz-default-settings
-sed -i "/exit 0/i\uci set network.wan.ipaddr='192.168.1.3'" /workdir/openwrt/package/lean/default-settings/files/zzz-default-settings
-sed -i "/exit 0/i\uci set network.wan.gateway='192.168.1.1'" /workdir/openwrt/package/lean/default-settings/files/zzz-default-settings
-sed -i "/exit 0/i\uci set network.wan.dns='192.168.1.1'" /workdir/openwrt/package/lean/default-settings/files/zzz-default-settings
-sed -i "/exit 0/i\uci set network.wan.netmask='255.255.255.0'" /workdir/openwrt/package/lean/default-settings/files/zzz-default-settings
-
-sed -i "/exit 0/i\uci set network.wan6.proto=none" /workdir/openwrt/package/lean/default-settings/files/zzz-default-settings   #关掉wan6
+#第二种有时间再研究
 
 sed -i "/exit 0/i\uci commit network" /workdir/openwrt/package/lean/default-settings/files/zzz-default-setting
 
