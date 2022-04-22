@@ -49,11 +49,11 @@ sed -i "/exit 0/i\uci commit network" /workdir/openwrt/package/lean/default-sett
 #设置wireless
 sed -i "/exit 0/i\uci set wireless.default_radio0.ssid='Airport_5G'" /workdir/openwrt/package/lean/default-settings/files/zzz-default-settings
 sed -i "/exit 0/i\uci set wireless.default_radio0.encryption='psk-mixed'" /workdir/openwrt/package/lean/default-settings/files/zzz-default-settings #sae-mixed:wap2/3混合模式；psk-mixed：wap/wap2混合模式；
-sed -i "/exit 0/i\uci set wireless.default_radio0.key='密码'" /workdir/openwrt/package/lean/default-settings/files/zzz-default-settings
+sed -i "/exit 0/i\uci set wireless.default_radio0.key='password'" /workdir/openwrt/package/lean/default-settings/files/zzz-default-settings
 
 sed -i "/exit 0/i\uci set wireless.default_radio1.ssid='Airport'" /workdir/openwrt/package/lean/default-settings/files/zzz-default-settings
 sed -i "/exit 0/i\uci set wireless.default_radio1.encryption='psk-mixed'" /workdir/openwrt/package/lean/default-settings/files/zzz-default-settings #sae-mixed:wap2/3混合模式；psk-mixed：wap/wap2混合模式；
-sed -i "/exit 0/i\uci set wireless.default_radio1.key='密码'" /workdir/openwrt/package/lean/default-settings/files/zzz-default-settings
+sed -i "/exit 0/i\uci set wireless.default_radio1.key='password'" /workdir/openwrt/package/lean/default-settings/files/zzz-default-settings
 
 sed -i "/exit 0/i\uci commit wireless" /workdir/openwrt/package/lean/default-settings/files/zzz-default-setting
 
